@@ -9,10 +9,19 @@ export class AppComponent {
   title: string = 'My first AGM project';
   lat: number = 12.9716;
   lng: number = 77.5946;
+  latlng: string = '';
+
+
+  
 
   mapClicked($event: AGMMouseEvent) {
     this.lat = $event.coords.lat;
     this.lng = $event.coords.lng;
+
+    this.latlng = `${this.lat},${this.lng}`;
+
+    console.log(this.latlng);
+
   }
 
 }
